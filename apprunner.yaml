@@ -4,7 +4,7 @@ build:
   commands:
     build:
     - yum install -y pycairo
-    - cd subdir-for-project-1; pip install -r subdir-for-project-1/requirements.txt
+    - cd subdir-for-project-1; pip install -r requirements.txt
 run:
   command: cd subdir-for-project-1; python app.py
   network:

@@ -155,7 +155,7 @@ def headers(request):
 routes = [
     Route('/', endpoint=index),
     Route('/headers', endpoint=headers),
-    Mount('/static', app=StaticFiles(directory='static'), name='static'),
+    Mount('/static', app=StaticFiles(directory='subdir-for-project-1/static'), name='static'),
 ]
 
 app = Starlette(debug=True, routes=routes)

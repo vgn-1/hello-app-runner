@@ -3,10 +3,10 @@ runtime: python3
 build:
   commands:
     build:
-    - cd subdir-for-project-1; yum install -y pycairo
-    - cd subdir-for-project-1; pip install -r requirements.txt
+    - yum install -y pycairo
+    - pip install -r subdir-for-project-1/requirements.txt
 run:
-  command: cd subdir-for-project-1; python app.py
+  command: python subdir-for-project-1/app.py
   network:
     port: 8000
 

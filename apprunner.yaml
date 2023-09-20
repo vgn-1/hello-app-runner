@@ -4,9 +4,9 @@ build:
   commands:
     build:
     - yum install -y pycairo
-    - pip install -r subdir-for-project-1/requirements.txt
+    - cd subdir-for-project-1; pip install -r subdir-for-project-1/requirements.txt
 run:
-  command: python subdir-for-project-1/app.py
+  command: cd subdir-for-project-1; python app.py
   network:
     port: 8000
 
